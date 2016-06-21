@@ -1,0 +1,33 @@
+{
+  "name": "mpstyle/doyoumean",
+  "version": "0.0.1",
+  "license": "LGPL-3.0+",
+  "type": "library",
+  "authors": [
+    {
+      "name": "Michele Pagnin",
+      "email": "pagnin.michele@gmail.com",
+      "homepage": "http://mpmp.altervista.org",
+      "role": "Main Developer"
+    }
+  ],
+  "support": {
+    "email": "pagnin.michele@gmail.com"
+  },
+  "minimum-stability": "dev",
+  "require": {
+  },
+  "require-dev": {
+    "robmorgan/phinx": "^0.5.4",
+    "phpunit/phpunit": "5.4.*"
+  },
+  "autoload": {
+    "psr-4": {
+      "mpstyle\\doyoumean\\": "src/main/php/",
+      "mpstyle\\doyoumean\\test\\": "src/test/php/"
+    }
+  },
+  "scripts": {
+    "test": "phinx migrate -e testing && ./vendor/bin/phpunit -c ./phpunit.xml"
+  }
+}
